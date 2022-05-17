@@ -34,6 +34,16 @@ if(scoreleftwrist>0.2){
         song2.play();
         document.getElementById("song").innerHTML="playing Song 2";
     }
+}
+
+if(scorerightwrist>0.2){
+    circle(rightWristX,rightWristY,20);
+    song2.stop();
+    if(song1status==false){
+        song1.play();
+        document.getElementById("song").innerHTML="playing Song 1";
+    }
+}
 
     
     
@@ -41,7 +51,7 @@ if(scoreleftwrist>0.2){
 }
 
 function modelLoaded() {
-    console.log("PoseNet Is Initialized")
+    console.log("PoseNet Is Initialized");
 }
 
 function gotPoses(results)
@@ -61,3 +71,6 @@ function gotPoses(results)
         
     }
 }
+
+
+
